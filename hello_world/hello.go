@@ -2,8 +2,14 @@ package main
 
 import "fmt"
 
+const HELLO_PREFIX = "hello, "
+
 func Hello(name string) string {
-	return "hello, " + name
+	if name == "" {
+		name = "world"
+	}
+
+	return HELLO_PREFIX + name
 }
 
 func main() {
