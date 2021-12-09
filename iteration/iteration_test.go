@@ -35,6 +35,12 @@ func BenchmarkRepeat(b *testing.B) {
 	}
 }
 
+func BenchmarkRepeat2(b *testing.B) {
+	for i := 0; i < 20; i++ {
+		Repeat("j", b.N)
+	}
+}
+
 func ExampleRepeat() {
 	fmt.Println(Repeat("c", 6))
 	// Output: cccccc
