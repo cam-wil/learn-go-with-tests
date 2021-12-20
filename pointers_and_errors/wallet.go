@@ -11,12 +11,8 @@ type Wallet struct {
 	balance Bitcoin
 }
 
-type Stringer interface {
-	String() string
-}
-
 func (w *Wallet) Deposit(amount Bitcoin) {
-	//fmt.Printf("address of balance in deposit is %v \n", &w.balance)
+	//fmt.Printf("address of balance in deposit is %v \n", &w.balance)  // address of
 	w.balance += amount
 }
 
